@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <div class="navbar-left">
+      <h1 class="navbar-title">Book Library</h1>
+    </div>
+    
+    <% if user_signed_in? %>
+      <div class="navbar-right">
+        <p class="welcome-message">Welcome, <%= current_user.email %> </p>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "btn-logout" %>
+      </div>
+    <% end %>
+  </nav>

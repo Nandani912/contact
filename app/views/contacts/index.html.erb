@@ -1,0 +1,10 @@
+<header><%= render partial: "partial/header"%></header>
+<div id="container">
+<% @contacts.each do |contact| %>
+
+  <%= link_to contact.name,contact %> 
+  <br>
+  <% end %>
+  <br>
+  <%= link_to "New Contact",new_contact_path %>
+  </div>

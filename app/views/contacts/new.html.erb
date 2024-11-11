@@ -1,0 +1,5 @@
+<header><%= render partial: "partial/header"%></header>
+
+<h2>Add New Contact</h2>
+<%= render 'form' ,contact: @contact%>
+ <%=button_to "home","/contacts",method: :get %>

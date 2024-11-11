@@ -1,0 +1,11 @@
+<header><%= render partial: "partial/header"%></header>
+<div id="container">
+<div class="contact">
+<p>Contact name:<%=@contact.name%></p>
+<p>Contact email:<%=@contact.email%></p><br>
+<p>Contact number:<%=@contact.phone%></p><br>
+  <%= link_to "Edit Contact",edit_contact_path %>
+  <%= button_to "Delete Contact",contact_path(@contact), method: :delete %>
+</div>
+ <%=button_to "home","/contacts",method: :get %>
+<div>
